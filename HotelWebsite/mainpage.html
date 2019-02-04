@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var delay=20;
+var imgsize=5;
+var arrsize=4;
+var timer;
+var whoc = new Array(arrsize);
+var wid;
+var hei;
+var i=0;
+function zoom_out(p,q,which)
+{
+if(which.width <= p)
+which.width += imgsize;
+if(which.height <= q)
+which.height += imgsize;
+if(which.width <= p)
+{
+var tmp=which.id;
+timer=eval("setTimeout('zoom_out("+p+","+q+","+tmp+")', delay)");
+}
+if(which.width > p)
+{
+zoom_check(which.id);
+clearTimeout(timer);
+}
+}
+function zoom_check(xx)
+{
+for(var x=0; x<(whoc.length);x++)
+{
+if(whoc[x] != null && whoc[x] != xx)
+{
+var ff = document.getElementById(whoc[x]);
+ff.width=wid;
+ff.height=hei;
+}
+}
+}
+function zoom_in(r,s,asd)
+{
+if(i<(whoc.length-1))i++;
+elsei=0;
+whoc[i] = asd.id;
+if(asd.width >= r)
+asd.width -= imgsize;
+if(asd.height >= s)
+asd.height -= imgsize;
+asd.width=r;
+asd.height=s;
+wid=asd.width;
+hei=asd.height;
+}
+function ctck()
+{
+var sds = document.getElementById("dum");
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+var sdss = document.getElementById("dumdiv");
+if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+</script>
+<title> 5 star hotel</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="header">
+<img src="logo.jpg" style="float:left;width:150px;height:150px">
+ <b>Gr@nd Hy@tt</b> <br>
+</div>
+
+<br>
+
+<div id="header1">
+<a href="mainpage.html" target="_self">Home</a>
+<a href="reservation.html" target="_self">Reservation</a> 
+<a href="facilities.html" target="_self">Facilities</a>
+<a href="aboutus.html" target="_self">About-Us</a>
+<a href="contactus.html" target="_self">Contact-Us</a>
+</div>
+<br>
+<br>
+<div id="PhotoGallery" style="width:1333px;">
+   <marquee scrollamount="3" direction="left" bgcolor="#f8f8f8" behavior="alternate">
+
+
+
+    <img src="hotel3.jpg" width="500px" height="300px" name="Images" />
+
+    <img src="hotel8.jpg" width="500px" height="300px" name="Images" />
+<img src="room.jpg" width="500px" height="300px" name="Images" />
+
+
+    </marquee>
+   </div>
+<br>
+
+
+<table align=center cellspacing=2 cellpadding=2 height=100% width=100%><tr>
+<td align=center width=120 height=125 style='cursor:pointer;'>
+
+<a href="mainpage.html">
+<img id="myPicture1" src="home1.png" width="40" height="48" onMouseover="zoom_out(55,65,this)" onMouseout="zoom_in(40,48,this)"></td>
+<td width=10></td>
+</a>
+
+<td align=center width=120 height=125 style='cursor:pointer;'>
+
+<a href="facilities.html">
+<img id="myPicture2" src="rest.jpg" width="40" height="48" onMouseover="zoom_out(55,65,this)" onMouseout="zoom_in(40,48,this)"></td>
+<td width=10></td>
+</a>
+
+<td align=center width=120 height=125 style='cursor:pointer;'>
+
+<a href="facilities.html">
+<img id="myPicture3" src="swim.jpg" width="40" height="48" onMouseover="zoom_out(55,65,this)" onMouseout="zoom_in(40,48,this)"></td>
+<td width=10></td>
+</a>
+
+<td align=center width=120 height=125 style='cursor:pointer;'>
+
+<a href="contactus.html">
+<img id="myPicture4" src="contact.jpg" width="40" height="48" onMouseover="zoom_out(55,65,this)" onMouseout="zoom_in(40,48,this)"></td>
+</tr>
+</a>
+
+<tr><td colspan=7>
+<div align=center style="font-size: 10px;color: #dadada;" id="dumdiv">
+<a href="https://www.hscripts.com" id="dum" style="text-decoration:none;color: #dadada;">© hscripts.com</a>
+</div>
+<script language="javascript">document.onload = ctck();</script>
+</td></tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+#header
+{
+	color: #a8a8a8;
+	height: 80px;
+	background-color: #f8f8f8;
+	text-indent:250px;
+	font-family: Brush Script MT;
+	font-size:50px;
+	margin-top:10px;
+	margin-left:10px;
+	font-weight:bolder;
+}
+
+#header1
+{
+	height: 30px;
+	background-color: #f8f8f8;
+	word-spacing:50px;
+	font-family:Lucida Handwriting;
+	font-size:20px;
+	text-indent:150px;
+	text-decoration:bold;
+
+
+}
+
+#content
+{
+	
+	;background-size: 1350px;
+	text-align: justify;	
+}
+
+a
+{
+	color: #D4BFA9;
+}
+
+
+
+h3
+{
+	text-decoration: underline;
+	
+}
+ h2
+ {
+	color: #B00000; 
+ }
+p
+{
+text-align: center;
+font-family:Comic Sans MS;
+font-size:20px;
+}
+ul
+{
+text-align: justify;
+font-family:Comic Sans MS;
+}
